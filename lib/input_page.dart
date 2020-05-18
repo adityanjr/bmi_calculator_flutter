@@ -86,8 +86,8 @@ class _InputPageState extends State<InputPage> {
                   ),
                   Slider(
                     value: height.toDouble(),
-                    min: 120.0,
-                    max: 220.0,
+                    min: 150.0,
+                    max: 180.0,
                     inactiveColor: Colors.grey,
                     onChanged: (double newValue) {
                       setState(() {
@@ -118,30 +118,19 @@ class _InputPageState extends State<InputPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          RawMaterialButton(
-                            onPressed: () {},
-                            elevation: 2.0,
-                            fillColor: Colors.grey,
-                            child: Icon(
-                              Icons.remove,
-                              size: 20.0,
-                              color: Colors.black,
-                            ),
-                            padding: EdgeInsets.all(15.0),
-                            shape: CircleBorder(),
-                          ),
-                          RawMaterialButton(
-                            onPressed: () {},
-                            elevation: 2.0,
-                            fillColor: Colors.grey,
-                            child: Icon(
-                              Icons.add,
-                              size: 20.0,
-                              color: Colors.black,
-                            ),
-                            padding: EdgeInsets.all(15.0),
-                            shape: CircleBorder(),
-                          ),
+                          MyButton(icon: FontAwesomeIcons.minus,
+                            onPressed: (){
+                              setState(() {
+                                weight--;
+                              });
+                            },),
+                          SizedBox(width: 15.0,),
+                          MyButton(icon: FontAwesomeIcons.plus,
+                            onPressed: (){
+                              setState(() {
+                                weight++;
+                              });
+                            },),
                         ],
                       )
                     ],

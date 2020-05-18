@@ -56,3 +56,30 @@ class ContainerCard extends StatelessWidget {
     );
   }
 }
+
+class MyButton extends StatelessWidget {
+
+  final IconData icon;
+  final Function onPressed;
+  MyButton({this.icon,this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      onPressed: onPressed,
+      elevation: 0.0,
+      fillColor: Color(0xFF8D8E98),
+      constraints: BoxConstraints.tightFor(
+        width: 56.0,
+        height: 56.0,
+      ),
+      padding: EdgeInsets.all(15.0),
+      shape: CircleBorder(),
+      child: Icon(
+        icon,
+        size: 20.0,
+        color: Colors.white,
+      ),
+    );
+  }
+}
