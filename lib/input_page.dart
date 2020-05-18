@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'contents.dart';
 import 'result_page.dart';
+import 'calculator.dart';
 
 const activeCardColor = Color(0xFF1D1E36);
 const inactiveCardColor = Color(0xFF111324);
@@ -177,33 +178,19 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: (){
-              Navigator.push(context,
-                MaterialPageRoute(builder: (context)=> Results()));
-            },
-            child: Container(
-              height: 65.0,
-              width: double.infinity,
-              margin: EdgeInsets.only(top: 15.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.0),
-                color: bottomContainerColor,
-              ),
-              child: Center(
-                child: Text(
-                  'CALCULATE',
-                  style: TextStyle(
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-          )
+          BottomButton(buttonText: 'CALCULATE', onTap: (){
+
+            Calculator calc = Calculator(height: height, weight: weight);
+
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context)=> Results(calc.calculateBMI(),
+                calc.getResult(), calc.getInterpretation()),
+                ));
+          },),
         ],
       )
 
     );
   }
 }
+

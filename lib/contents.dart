@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'input_page.dart';
 
 const labelStyle = TextStyle(
     fontSize: 18.0,
@@ -77,6 +78,35 @@ class MyButton extends StatelessWidget {
       child: Icon(
         icon,
         color: Colors.white,
+      ),
+    );
+  }
+}
+
+class BottomButton extends StatelessWidget {
+
+  final String buttonText;
+  final Function onTap;
+  BottomButton({this.buttonText, this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        color: bottomContainerColor,
+        height: 65.0,
+        width: double.infinity,
+        margin: EdgeInsets.only(top: 15.0),
+        child: Center(
+          child: Text(
+            buttonText,
+            style: TextStyle(
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
       ),
     );
   }
