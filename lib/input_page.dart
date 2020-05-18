@@ -14,7 +14,8 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   String selectedGender;
-  int height = 180;
+  int height = 160;
+  int weight = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +103,50 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ContainerCard(colour: activeCardColor),
+                  child: ContainerCard(colour: activeCardColor,
+                  childCard: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'WEIGHT',
+                        style: labelStyle,
+                      ),
+                      Text(
+                        weight.toString(),
+                        style: thickFontStyle,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          RawMaterialButton(
+                            onPressed: () {},
+                            elevation: 2.0,
+                            fillColor: Colors.grey,
+                            child: Icon(
+                              Icons.remove,
+                              size: 20.0,
+                              color: Colors.black,
+                            ),
+                            padding: EdgeInsets.all(15.0),
+                            shape: CircleBorder(),
+                          ),
+                          RawMaterialButton(
+                            onPressed: () {},
+                            elevation: 2.0,
+                            fillColor: Colors.grey,
+                            child: Icon(
+                              Icons.add,
+                              size: 20.0,
+                              color: Colors.black,
+                            ),
+                            padding: EdgeInsets.all(15.0),
+                            shape: CircleBorder(),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  ),
                 ),
                 Expanded(
                   child: ContainerCard(colour: activeCardColor),
