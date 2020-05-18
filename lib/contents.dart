@@ -70,14 +70,12 @@ class MyButton extends StatelessWidget {
       elevation: 0.0,
       fillColor: Color(0xFF8D8E98),
       constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0,
+        width: 50.0,
+        height: 50.0,
       ),
-      padding: EdgeInsets.all(15.0),
       shape: CircleBorder(),
       child: Icon(
         icon,
-        size: 20.0,
         color: Colors.white,
       ),
     );

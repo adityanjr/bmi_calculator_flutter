@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'contents.dart';
+import 'result_page.dart';
 
 const activeCardColor = Color(0xFF1D1E36);
 const inactiveCardColor = Color(0xFF111324);
@@ -15,7 +16,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   String selectedGender;
   int height = 160;
-  int weight = 60;
+  int weight = 65;
+  int age = 19;
 
   @override
   Widget build(BuildContext context) {
@@ -138,18 +140,65 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ),
                 Expanded(
-                  child: ContainerCard(colour: activeCardColor),
+                  child: ContainerCard(colour: activeCardColor,
+                    childCard: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'AGE',
+                          style: labelStyle,
+                        ),
+                        Text(
+                          age.toString(),
+                          style: thickFontStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            MyButton(icon: FontAwesomeIcons.minus,
+                              onPressed: (){
+                                setState(() {
+                                  age--;
+                                });
+                              },),
+                            SizedBox(width: 15.0,),
+                            MyButton(icon: FontAwesomeIcons.plus,
+                              onPressed: (){
+                                setState(() {
+                                  age++;
+                                });
+                              },),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
           ),
-          Container(
-            height: 65.0,
-            width: double.infinity,
-            margin: EdgeInsets.only(top: 15.0),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8.0),
-              color: bottomContainerColor,
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context)=> Results()));
+            },
+            child: Container(
+              height: 65.0,
+              width: double.infinity,
+              margin: EdgeInsets.only(top: 15.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                color: bottomContainerColor,
+              ),
+              child: Center(
+                child: Text(
+                  'CALCULATE',
+                  style: TextStyle(
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ),
           )
         ],
