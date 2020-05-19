@@ -15,7 +15,7 @@ const labelStyle = TextStyle(
 );
 
 const thickFontStyle = TextStyle(
-  fontSize: 40.0,
+  fontSize: 30.0,
   fontWeight: FontWeight.w900,
 );
 
@@ -33,7 +33,7 @@ class IconContent extends StatelessWidget {
       children: <Widget>[
         Icon(
           icon,
-          size: 80.0,
+          size: 60.0,
         ),
         SizedBox(
           height: 20.0,
@@ -77,11 +77,11 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       onPressed: onPressed,
-      elevation: 0.0,
+      elevation: 3.0,
       fillColor: cardLabelColor,
       constraints: BoxConstraints.tightFor(
-        width: 50.0,
-        height: 50.0,
+        width: 40.0,
+        height: 40.0,
       ),
       shape: CircleBorder(),
       child: Icon(
@@ -128,10 +128,13 @@ class FlareWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250.0,
-      height: 250.0,
+      width: 200.0,
+      height: 200.0,
       child: FlareActor("assets/Teddy.flr",
-          animation: animationType),
+          alignment:Alignment.center,
+          fit:BoxFit.contain,
+          animation: animationType
+      ),
     );
   }
 }
