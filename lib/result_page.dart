@@ -1,14 +1,13 @@
-import 'package:bmicalculator/input_page.dart';
 import 'package:flutter/material.dart';
 import 'contents.dart';
-import 'package:lottie/lottie.dart';
 
 class Results extends StatelessWidget {
 
   final String bmiResult;
   final String resultText;
   final String interpretation;
-  Results(this.bmiResult,this.resultText,this.interpretation);
+  final Widget lottieAnimation;
+  Results(this.bmiResult,this.resultText,this.interpretation, this.lottieAnimation);
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +33,7 @@ class Results extends StatelessWidget {
               childCard: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Lottie.network('https://assets6.lottiefiles.com/packages/lf20_2DbwUj.json',
-                    height: 200.0,
-                    width: 200.0),
+                  lottieAnimation,
                   Text(
                     resultText.toUpperCase(),
                     style: labelStyle,

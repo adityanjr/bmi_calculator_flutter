@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'input_page.dart';
 
+//COLORS
+const mainBackgroundColor = Color(0xFF16172E);
+const activeCardColor = Color(0xFF1D1E36);
+const inactiveCardColor = Color(0xFF111324);
+const bottomContainerColor = Color(0xFF0171DF);
+const cardLabelColor = Color(0xFF8D8E98);
+
+//Text Styles
 const labelStyle = TextStyle(
     fontSize: 18.0,
-    color: Color(0xFF8D8E98)
+    color: cardLabelColor,
 );
 
 const thickFontStyle = TextStyle(
@@ -11,6 +18,7 @@ const thickFontStyle = TextStyle(
   fontWeight: FontWeight.w900,
 );
 
+//CLASSES
 class IconContent extends StatelessWidget {
 
   final IconData icon;
@@ -69,7 +77,7 @@ class MyButton extends StatelessWidget {
     return RawMaterialButton(
       onPressed: onPressed,
       elevation: 0.0,
-      fillColor: Color(0xFF8D8E98),
+      fillColor: cardLabelColor,
       constraints: BoxConstraints.tightFor(
         width: 50.0,
         height: 50.0,

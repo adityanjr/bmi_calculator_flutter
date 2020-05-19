@@ -1,13 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'contents.dart';
 import 'result_page.dart';
 import 'calculator.dart';
 
-const activeCardColor = Color(0xFF1D1E36);
-const inactiveCardColor = Color(0xFF111324);
-const bottomContainerColor = Color(0xFF0171DF);
 
 class InputPage extends StatefulWidget {
   @override
@@ -15,6 +11,8 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+
+  //initial state values
   String selectedGender;
   int height = 160;
   int weight = 65;
@@ -91,7 +89,7 @@ class _InputPageState extends State<InputPage> {
                     value: height.toDouble(),
                     min: 150.0,
                     max: 180.0,
-                    inactiveColor: Colors.grey,
+                    inactiveColor: inactiveCardColor,
                     onChanged: (double newValue) {
                       setState(() {
                         height = newValue.round();
@@ -179,12 +177,10 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           BottomButton(buttonText: 'CALCULATE', onTap: (){
-
             Calculator calc = Calculator(height: height, weight: weight);
-
             Navigator.push(context,
                 MaterialPageRoute(builder: (context)=> Results(calc.calculateBMI(),
-                calc.getResult(), calc.getInterpretation()),
+                calc.getResult(), calc.getInterpretation(), calc.getAnimation()),
                 ));
           },),
         ],
@@ -193,4 +189,3 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
-
