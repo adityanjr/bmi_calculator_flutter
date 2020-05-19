@@ -87,8 +87,8 @@ class _InputPageState extends State<InputPage> {
                   ),
                   Slider(
                     value: height.toDouble(),
-                    min: 150.0,
-                    max: 180.0,
+                    min: 120.0,
+                    max: 220.0,
                     inactiveColor: inactiveCardColor,
                     onChanged: (double newValue) {
                       setState(() {

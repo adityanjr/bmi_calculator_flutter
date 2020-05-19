@@ -36,7 +36,7 @@ class Results extends StatelessWidget {
                     resultText.toUpperCase(),
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
-                      fontSize: 25.0,
+                      fontSize: 28.0,
                       color: resultText=='Normal' ? Colors.lightGreen : Colors.red,
                     ),
                   ),

@@ -10,12 +10,12 @@ const cardLabelColor = Color(0xFF8D8E98);
 
 //Text Styles
 const labelStyle = TextStyle(
-    fontSize: 18.0,
+    fontSize: 15.0,
     color: cardLabelColor,
 );
 
 const thickFontStyle = TextStyle(
-  fontSize: 50.0,
+  fontSize: 40.0,
   fontWeight: FontWeight.w900,
 );
 
@@ -111,7 +111,7 @@ class BottomButton extends StatelessWidget {
           child: Text(
             buttonText,
             style: TextStyle(
-              fontSize: 25.0,
+              fontSize: 20.0,
               fontWeight: FontWeight.bold,
             ),
           ),
