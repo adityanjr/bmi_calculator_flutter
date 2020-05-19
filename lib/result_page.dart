@@ -18,29 +18,36 @@ class Results extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Expanded(
-            flex: 1,
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 15.0, 0, 0),
             child: Center(
               child: Text(
-                'Your Result',
+                'YOUR RESULT',
                 style: labelStyle,
               ),
             ),
           ),
           Expanded(
-            flex: 5,
             child: ContainerCard(colour: activeCardColor,
               childCard: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  lottieAnimation,
                   Text(
                     resultText.toUpperCase(),
-                    style: labelStyle,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 25.0,
+                      color: resultText=='Normal' ? Colors.lightGreen : Colors.red,
+                    ),
                   ),
+                  lottieAnimation,
                   Text(
                     bmiResult,
-                    style: thickFontStyle,
+                    style: TextStyle(
+                      fontSize: 75.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.lightBlue,
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(20.0),

@@ -1,3 +1,4 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
 //COLORS
@@ -116,6 +117,21 @@ class BottomButton extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class FlareWidget extends StatelessWidget {
+  FlareWidget(this.animationType);
+  final String animationType;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 250.0,
+      height: 250.0,
+      child: FlareActor("assets/Teddy.flr",
+          animation: animationType),
     );
   }
 }

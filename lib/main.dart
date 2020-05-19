@@ -13,6 +13,7 @@ class BMICalculator extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: mainBackgroundColor,
         primaryColor: mainBackgroundColor,
+
       ),
       home: InputPage(),
     );

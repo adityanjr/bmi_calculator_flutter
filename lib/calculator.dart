@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/cupertino.dart';
-import 'package:lottie/lottie.dart';
+import 'contents.dart';
 
 class Calculator {
   Calculator({this.height, this.weight});
@@ -37,19 +37,13 @@ class Calculator {
 
   Widget getAnimation() {
     if (getResult() == 'Overweight') {
-      return Lottie.network(
-          'https://assets5.lottiefiles.com/packages/lf20_c4TObF.json',
-          height: 200.0, width: 200.0);
+      return FlareWidget('fail');
     }
     else if(getResult()=='Normal'){
-      return Lottie.network(
-          'https://assets6.lottiefiles.com/packages/lf20_LoU6vj.json',
-          height: 200.0, width: 200.0);
+      return FlareWidget('success');
     }
     else{
-      return Lottie.network(
-          'https://assets3.lottiefiles.com/packages/lf20_YyZFnH.json',
-          height: 200.0, width: 200.0);
+      return FlareWidget('success');
     }
   }
 }
