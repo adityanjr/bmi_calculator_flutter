@@ -43,7 +43,7 @@ class Calculator {
       return FlareWidget('success');
     }
     else{
-      return FlareWidget('success');
+      return FlareWidget('fail');
     }
   }
 }
