@@ -46,7 +46,7 @@ class Results extends StatelessWidget {
                     Text(
                       bmiResult,
                       style: TextStyle(
-                        fontSize: 75.0,
+                        fontSize: 65.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.lightBlue,
                       ),

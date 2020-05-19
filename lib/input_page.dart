@@ -112,9 +112,12 @@ class _InputPageState extends State<InputPage> {
                         'WEIGHT',
                         style: labelStyle,
                       ),
-                      Text(
-                        weight.toString(),
-                        style: thickFontStyle,
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          weight.toString(),
+                          style: thickFontStyle,
+                        ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -147,9 +150,12 @@ class _InputPageState extends State<InputPage> {
                           'AGE',
                           style: labelStyle,
                         ),
-                        Text(
-                          age.toString(),
-                          style: thickFontStyle,
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text(
+                            age.toString(),
+                            style: thickFontStyle,
+                          ),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
