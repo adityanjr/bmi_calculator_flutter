@@ -104,7 +104,7 @@ class BottomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         color: bottomContainerColor,
-        height: 65.0,
+        height: 55.0,
         width: double.infinity,
         margin: EdgeInsets.only(top: 15.0),
         child: Center(
