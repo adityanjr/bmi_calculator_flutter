@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'contents.dart';
 import 'result_page.dart';
-import 'calculator.dart';
+import 'result_calc.dart';
 
 
 class InputPage extends StatefulWidget {
