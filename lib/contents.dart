@@ -2,7 +2,7 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
 //COLORS
-const mainBackgroundColor = Color(0xFF16172E);
+const mainBackgroundColor = Color(0xFF16172F);
 const activeCardColor = Color(0xFF1D1E36);
 const inactiveCardColor = Color(0xFF111324);
 const bottomContainerColor = Color(0xFF0171DF);
@@ -10,8 +10,8 @@ const cardLabelColor = Color(0xFF8D8E98);
 
 //Text Styles
 const labelStyle = TextStyle(
-    fontSize: 15.0,
-    color: cardLabelColor,
+  fontSize: 15.0,
+  color: cardLabelColor,
 );
 
 const thickFontStyle = TextStyle(
@@ -21,10 +21,10 @@ const thickFontStyle = TextStyle(
 
 //CLASSES
 class IconContent extends StatelessWidget {
-
   final IconData icon;
   final String text;
-  IconContent(this.icon,this.text);
+  final Color colour;
+  IconContent(this.icon, this.text, this.colour);
 
   @override
   Widget build(BuildContext context) {
@@ -34,21 +34,18 @@ class IconContent extends StatelessWidget {
         Icon(
           icon,
           size: 60.0,
+          color: colour,
         ),
         SizedBox(
           height: 20.0,
         ),
-        Text(
-          text,
-          style: labelStyle
-        ),
+        Text(text, style: labelStyle),
       ],
     );
   }
 }
 
 class ContainerCard extends StatelessWidget {
-
   ContainerCard({@required this.colour, this.childCard});
   final Color colour;
   final Widget childCard;
@@ -68,10 +65,9 @@ class ContainerCard extends StatelessWidget {
 }
 
 class MyButton extends StatelessWidget {
-
   final IconData icon;
   final Function onPressed;
-  MyButton({this.icon,this.onPressed});
+  MyButton({this.icon, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +89,6 @@ class MyButton extends StatelessWidget {
 }
 
 class BottomButton extends StatelessWidget {
-
   final String buttonText;
   final Function onTap;
   BottomButton({this.buttonText, this.onTap});
@@ -131,10 +126,9 @@ class FlareWidget extends StatelessWidget {
       width: 200.0,
       height: 200.0,
       child: FlareActor("assets/Teddy.flr",
-          alignment:Alignment.center,
-          fit:BoxFit.contain,
-          animation: animationType
-      ),
+          alignment: Alignment.center,
+          fit: BoxFit.contain,
+          animation: animationType),
     );
   }
 }
