@@ -2,19 +2,26 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
 //COLORS
-const mainBackgroundColor = Color(0xFF16172F);
-const activeCardColor = Color(0xFF1D1E36);
-const inactiveCardColor = Color(0xFF111324);
+
+const genderActiveColor = Color(0xFFBFEFFF);
+const genderActiveButton = Color(0xFF0276FD);
+const heightBackgroundColor = Color(0xFFffcccc);
+const heightActiveColor = Color(0xFFe50000);
+const heightInactiveColor = Color(0xFFffb2b2);
+const weightBackgroundColor = Color(0xFFE0FFFF);
+const weightActiveColor = Color(0xFF00CDCD);
+const ageBackgroundColor = Color(0xFFffedcc);
+const ageActiveColor = Color(0xFFffae19);
+const resultCardColor = Color(0xFF1D1E36);
 const bottomContainerColor = Color(0xFF0276FD);
-const cardLabelColor = Color(0xFF00CDCD);
 
 //Text Styles
 TextStyle labelStyle(Color colour) {
-  return TextStyle(fontSize: 15.0, color: colour, fontFamily: 'Kayak');
+  return TextStyle(fontSize: 16.0, color: colour, fontFamily: 'Kayak', fontWeight: FontWeight.w800);
 }
 
 const thickFontStyle = TextStyle(
-    fontSize: 30.0, fontWeight: FontWeight.w900, fontFamily: 'Moderne');
+    fontSize: 35.0, fontWeight: FontWeight.w900, fontFamily: 'Moderne');
 
 //CLASSES
 class IconContent extends StatelessWidget {
@@ -65,14 +72,15 @@ class ContainerCard extends StatelessWidget {
 class MyButton extends StatelessWidget {
   final IconData icon;
   final Function onPressed;
-  MyButton({this.icon, this.onPressed});
+  final Color colour;
+  MyButton({this.icon, this.onPressed, this.colour});
 
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
       onPressed: onPressed,
       elevation: 3.0,
-      fillColor: cardLabelColor,
+      fillColor: colour,
       constraints: BoxConstraints.tightFor(
         width: 40.0,
         height: 40.0,

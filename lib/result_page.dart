@@ -30,7 +30,7 @@ class Results extends StatelessWidget {
             ),
             Expanded(
               child: ContainerCard(
-                colour: activeCardColor,
+                colour: resultCardColor,
                 childCard: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
@@ -57,14 +57,17 @@ class Results extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                         boxHeight: 75.0,
-                        boxBackgroundColor: activeCardColor,
+                        boxBackgroundColor: resultCardColor,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 12.0, right: 12.0),
+                      margin: EdgeInsets.only(left: 15.0, right: 15.0),
                       child: Text(
                         interpretation,
-                        style: labelStyle(Color(0xFFEBF4FA)),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Kayak',
+                            fontSize: 18.0),
                         textAlign: TextAlign.center,
                       ),
                     ),

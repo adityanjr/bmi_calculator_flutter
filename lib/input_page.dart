@@ -11,7 +11,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   //initial state values
-  String selectedGender;
+  String selectedGender = 'male';
   int height = 160;
   int weight = 65;
   int age = 19;
@@ -46,13 +46,13 @@ class _InputPageState extends State<InputPage> {
                   },
                   child: ContainerCard(
                     colour: selectedGender == 'male'
-                        ? Color(0xFFBFEFFF)
+                        ? genderActiveColor
                         : Colors.white,
                     childCard: IconContent(
                         icon: FontAwesome5.male,
                         text: 'MALE',
                         colour: selectedGender == 'male'
-                            ? Color(0xFF0276FD)
+                            ? genderActiveButton
                             : Colors.grey),
                   ),
                 ),
@@ -66,13 +66,13 @@ class _InputPageState extends State<InputPage> {
                   },
                   child: ContainerCard(
                     colour: selectedGender == 'female'
-                        ? Color(0xFFBFEFFF)
+                        ? genderActiveColor
                         : Colors.white,
                     childCard: IconContent(
                         icon: FontAwesome5.female,
                         text: 'FEMALE',
                         colour: selectedGender == 'female'
-                            ? Color(0xFF0276FD)
+                            ? genderActiveButton
                             : Colors.grey),
                   ),
                 ),
@@ -82,13 +82,13 @@ class _InputPageState extends State<InputPage> {
         ),
         Expanded(
           child: ContainerCard(
-            colour: Color(0xFFffcccc),
+            colour: heightBackgroundColor,
             childCard: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
                   'HEIGHT',
-                  style: labelStyle(Color(0xFFe50000)),
+                  style: labelStyle(heightActiveColor),
                 ),
                 SizedBox(height: 8.0),
                 Row(
@@ -106,9 +106,10 @@ class _InputPageState extends State<InputPage> {
                     Text(
                       'cm',
                       style: TextStyle(
-                        color: Color(0xFFe50000),
-                        fontSize: 20.0,
-                      ),
+                          color: heightActiveColor,
+                          fontSize: 25.0,
+                          fontFamily: 'Moderne',
+                          fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),
@@ -116,8 +117,8 @@ class _InputPageState extends State<InputPage> {
                   value: height.toDouble(),
                   min: 120.0,
                   max: 220.0,
-                  inactiveColor: Color(0xFFffb2b2),
-                  activeColor: Color(0xFFe50000),
+                  inactiveColor: heightInactiveColor,
+                  activeColor: heightActiveColor,
                   onChanged: (double newValue) {
                     setState(() {
                       height = newValue.round();
@@ -133,13 +134,13 @@ class _InputPageState extends State<InputPage> {
             children: <Widget>[
               Expanded(
                 child: ContainerCard(
-                  colour: Color(0xFFE0FFFF),
+                  colour: weightBackgroundColor,
                   childCard: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
                         'WEIGHT',
-                        style: labelStyle(Color(0xFF33D9D9)),
+                        style: labelStyle(weightActiveColor),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
@@ -152,6 +153,7 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           MyButton(
+                            colour: weightActiveColor,
                             icon: FontAwesome5.minus,
                             onPressed: () {
                               setState(() {
@@ -166,6 +168,7 @@ class _InputPageState extends State<InputPage> {
                           ),
                           MyButton(
                             icon: FontAwesome5.plus,
+                            colour: weightActiveColor,
                             onPressed: () {
                               setState(() {
                                 weight++;
@@ -180,13 +183,13 @@ class _InputPageState extends State<InputPage> {
               ),
               Expanded(
                 child: ContainerCard(
-                  colour: Color(0xFFffedcc),
+                  colour: ageBackgroundColor,
                   childCard: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
                         'AGE',
-                        style: labelStyle(Color(0xFFffae19)),
+                        style: labelStyle(ageActiveColor),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
@@ -199,6 +202,7 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           MyButton(
+                            colour: ageActiveColor,
                             icon: FontAwesome5.minus,
                             onPressed: () {
                               setState(() {
@@ -212,6 +216,7 @@ class _InputPageState extends State<InputPage> {
                             width: 15.0,
                           ),
                           MyButton(
+                            colour: ageActiveColor,
                             icon: FontAwesome5.plus,
                             onPressed: () {
                               setState(() {

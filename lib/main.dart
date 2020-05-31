@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'input_page.dart';
-import 'contents.dart';
 import 'package:flare_splash_screen/flare_splash_screen.dart';
 
 void main() {
