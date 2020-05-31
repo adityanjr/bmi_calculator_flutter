@@ -30,6 +30,7 @@ dependencies:
   flare_flutter: ^2.0.3
   fluttericon: ^1.0.7
   animated_text_kit: ^2.2.0
+  flare_splash_screen: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +48,7 @@ flutter:
 
   assets:
     - assets/Teddy.flr
+    - assets/trim_w.flr
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

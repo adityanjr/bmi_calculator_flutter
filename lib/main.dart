@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'input_page.dart';
 import 'contents.dart';
+import 'package:flare_splash_screen/flare_splash_screen.dart';
 
 void main() {
   runApp(BMICalculator());
@@ -14,7 +15,12 @@ class BMICalculator extends StatelessWidget {
         scaffoldBackgroundColor: mainBackgroundColor,
         primaryColor: mainBackgroundColor,
       ),
-      home: InputPage(),
+      home: SplashScreen.navigate(
+        name: 'assets/trim_w.flr',
+        next: (context) => InputPage(),
+        until: () => Future.delayed(Duration(seconds: 0)),
+        startAnimation: 'Untitled',
+      ),
     );
   }
 }
