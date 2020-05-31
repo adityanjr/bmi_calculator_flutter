@@ -5,26 +5,24 @@ import 'package:flutter/material.dart';
 const mainBackgroundColor = Color(0xFF16172F);
 const activeCardColor = Color(0xFF1D1E36);
 const inactiveCardColor = Color(0xFF111324);
-const bottomContainerColor = Color(0xFF0171DF);
-const cardLabelColor = Color(0xFF8D8E98);
+const bottomContainerColor = Color(0xFF0276FD);
+const cardLabelColor = Color(0xFF00CDCD);
 
 //Text Styles
-const labelStyle = TextStyle(
-  fontSize: 15.0,
-  color: cardLabelColor,
-);
+TextStyle labelStyle(Color colour) {
+  return TextStyle(fontSize: 15.0, color: colour, fontFamily: 'Kayak');
+}
 
 const thickFontStyle = TextStyle(
-  fontSize: 30.0,
-  fontWeight: FontWeight.w900,
-);
+    fontSize: 30.0, fontWeight: FontWeight.w900, fontFamily: 'Moderne');
 
 //CLASSES
 class IconContent extends StatelessWidget {
   final IconData icon;
   final String text;
   final Color colour;
-  IconContent(this.icon, this.text, this.colour);
+  final Color textColour;
+  IconContent({this.icon, this.text, this.colour, this.textColour});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +37,7 @@ class IconContent extends StatelessWidget {
         SizedBox(
           height: 20.0,
         ),
-        Text(text, style: labelStyle),
+        Text(text, style: labelStyle(textColour)),
       ],
     );
   }
@@ -52,12 +50,12 @@ class ContainerCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Card(
       child: childCard,
-      margin: EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-        color: colour,
-        //Color(0xFF1D1E36),
+      color: colour,
+      margin: EdgeInsets.all(16.0),
+      elevation: 4.0,
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
       ),
     );
@@ -106,9 +104,10 @@ class BottomButton extends StatelessWidget {
           child: Text(
             buttonText,
             style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
+                color: Colors.white,
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Moderne'),
           ),
         ),
       ),

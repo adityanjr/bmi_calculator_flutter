@@ -15,20 +15,18 @@ class Results extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text('BMI CALCULATOR'),
-        ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
-              margin: EdgeInsets.fromLTRB(0, 15.0, 0, 0),
-              child: Center(
-                child: Text(
-                  'YOUR RESULT',
-                  style: labelStyle,
-                ),
-              ),
+              margin: EdgeInsets.fromLTRB(24.0, 20.0, 0, 0),
+              child: Text('YOUR RESULT',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontFamily: 'Moderne',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18.0,
+                  )),
             ),
             Expanded(
               child: ContainerCard(
@@ -41,6 +39,7 @@ class Results extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 28.0,
+                        fontFamily: 'Moderne',
                         color: resultText == 'Normal'
                             ? Colors.lightGreen
                             : Colors.red,
@@ -65,7 +64,7 @@ class Results extends StatelessWidget {
                       margin: EdgeInsets.only(left: 12.0, right: 12.0),
                       child: Text(
                         interpretation,
-                        style: labelStyle,
+                        style: labelStyle(Color(0xFFEBF4FA)),
                         textAlign: TextAlign.center,
                       ),
                     ),

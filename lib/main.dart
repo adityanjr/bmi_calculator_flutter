@@ -11,10 +11,6 @@ class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: mainBackgroundColor,
-        primaryColor: mainBackgroundColor,
-      ),
       home: SplashScreen.navigate(
         name: 'assets/trim_w.flr',
         next: (context) => InputPage(),
