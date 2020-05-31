@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'contents.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'background.dart';
 
 class Results extends StatelessWidget {
   final String bmiResult;
@@ -13,9 +14,9 @@ class Results extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
+    return Background(
+      child: SafeArea(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
