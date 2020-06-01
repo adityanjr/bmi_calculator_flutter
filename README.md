@@ -1,10 +1,28 @@
-# bmicalculator
+![bmi_calc_flutter](https://BMI-flutter.png)
 
-BMI Calculator improved UI
+Installation
 
-## Getting Started
+```
+flutter pub get
+```
 
-This project is a starting point for a Flutter application.
+Usage
+
+```
+flutter run
+```
+
+Try Android APK : [Download From Google Drive](https://drive.google.com/file/d/1SQgf31aHGmtGcOps2BZ_m_nw_DlHMGUt/view?usp=sharing)
+
+BMI Calculator made with Flutter. Don't forget to star ⭐ the repo and feel free to use.
+
+### Created & Maintained By
+
+[Aditya Singh](https://github.com/adityanjr) ([@aditya_njr](https://instagram.com/aditya_njr))
+
+> If you found this project helpful or you learned something from the source code,
+
+## Getting Started with Flutter
 
 A few resources to get you started if this is your first Flutter project:
 
