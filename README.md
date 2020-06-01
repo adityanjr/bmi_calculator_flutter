@@ -1,4 +1,4 @@
-![bmi_calc_flutter](https://BMI-flutter.png)
+![bmi_calc_flutter](https://github.com/adityanjr/bmi_calculator_flutter/blob/master/bmi.jpg)
 
 Installation
 
@@ -12,7 +12,7 @@ Usage
 flutter run
 ```
 
-Try Android APK : [Download From Google Drive](https://drive.google.com/file/d/1SQgf31aHGmtGcOps2BZ_m_nw_DlHMGUt/view?usp=sharing)
+Try Android APK : [Download](https://drive.google.com/uc?export=download&id=1SQgf31aHGmtGcOps2BZ_m_nw_DlHMGUt)
 
 BMI Calculator made with Flutter. Don't forget to star ⭐ the repo and feel free to use.
 
@@ -20,7 +20,7 @@ BMI Calculator made with Flutter. Don't forget to star ⭐ the repo and feel fre
 
 [Aditya Singh](https://github.com/adityanjr) ([@aditya_njr](https://instagram.com/aditya_njr))
 
-> If you found this project helpful or you learned something from the source code,
+> If you found this project helpful or you learned something from the source code, [![Follow](https://img.shields.io/github/followers/adityanjr?label=Follow&style=social)](https://github.com/adityanjr)
 
 ## Getting Started with Flutter
 
