@@ -14,15 +14,9 @@ flutter pub get
 flutter run
 ```
 
-Try Android APK : [Download](https://drive.google.com/uc?export=download&id=1SQgf31aHGmtGcOps2BZ_m_nw_DlHMGUt)
+Android APK Here: [Download](https://drive.google.com/uc?export=download&id=1SQgf31aHGmtGcOps2BZ_m_nw_DlHMGUt)
 
-BMI Calculator made with Flutter. Don't forget to star ⭐ the repo and feel free to use.
-
-## Created & Maintained By
-
-[Aditya Singh](https://github.com/adityanjr) (📷 [@aditya_njr](https://instagram.com/aditya_njr))
-
-> If you found this project helpful or you learned something from the source code, do [![Follow](https://img.shields.io/github/followers/adityanjr?label=Follow&style=social)](https://github.com/adityanjr)
+BMI Calculator made with Flutter. Rive animations are used for awesome UI.
 
 ## Getting Started with Flutter
 
